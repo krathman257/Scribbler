@@ -1,8 +1,10 @@
+# authors
+# Kyle Rathman
+# Kendall Black
+# 4-29-2020
+
 from controller import Robot, Pen
 import math
-
-#Kendall Black
-#Kyle Rathman
 
 #Initialize variables
 TIME_STEP = 64
@@ -41,6 +43,10 @@ while robot.step(TIME_STEP) != -1:
         leftSpeed += -1 * motorAngle * 0.5 * MAX_SPEED
         rightSpeed += motorAngle * 0.5 * MAX_SPEED
     if ticker > 320:
+        #brake robot
+        for wheel in wheels:
+            wheel.setVelocity(0)
+        #break loop
         break
 
     #Write motor speeds
