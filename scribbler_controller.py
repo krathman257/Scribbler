@@ -1,6 +1,9 @@
 from controller import Robot, Pen
 import math
 
+#Kendall Black
+#Kyle Rathman
+
 #Initialize variables
 TIME_STEP = 64
 MAX_SPEED = 7
